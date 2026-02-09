@@ -12,10 +12,10 @@ const stats = [
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute inset-0 grid-pattern opacity-20" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full blur-[150px] bg-primary/10" />
+      {/* Soft background blobs */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full blur-[150px] bg-primary/8" />
       <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] rounded-full blur-[100px] bg-primary/5" />
+      <div className="absolute bottom-1/4 left-1/4 w-[300px] h-[300px] rounded-full blur-[120px] bg-secondary" />
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
@@ -31,7 +31,7 @@ const Hero = () => {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/50 bg-secondary/50 text-sm text-muted-foreground mb-8"
           >
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            Disrupting the Digital Landscape
+            Building Tomorrow's Solutions Today
           </motion.div>
 
           <motion.h1
