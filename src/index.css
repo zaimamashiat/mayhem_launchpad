@@ -4,34 +4,34 @@
 
 @layer base {
   :root {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 6%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 6%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 142 71% 45%;
-    --primary-foreground: 240 10% 3.9%;
-    --secondary: 240 4% 16%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 4% 16%;
-    --muted-foreground: 240 5% 65%;
-    --accent: 142 71% 45%;
-    --accent-foreground: 240 10% 3.9%;
+    --background: 40 33% 99%;
+    --foreground: 20 14% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14% 15%;
+    --primary: 12 76% 61%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 35 30% 95%;
+    --secondary-foreground: 20 14% 15%;
+    --muted: 35 20% 94%;
+    --muted-foreground: 20 10% 46%;
+    --accent: 12 76% 61%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 4% 16%;
-    --input: 240 4% 16%;
-    --ring: 142 71% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 35 15% 89%;
+    --input: 35 15% 89%;
+    --ring: 12 76% 61%;
     --radius: 0.75rem;
-    --sidebar-background: 240 10% 3.9%;
-    --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 142 71% 45%;
-    --sidebar-primary-foreground: 240 10% 3.9%;
-    --sidebar-accent: 240 4% 16%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 240 4% 16%;
-    --sidebar-ring: 142 71% 45%;
+    --sidebar-background: 40 33% 99%;
+    --sidebar-foreground: 20 14% 15%;
+    --sidebar-primary: 12 76% 61%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 35 30% 95%;
+    --sidebar-accent-foreground: 20 14% 15%;
+    --sidebar-border: 35 15% 89%;
+    --sidebar-ring: 12 76% 61%;
   }
 }
 
@@ -44,7 +44,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
   }
   section[id] {
     scroll-margin-top: 5rem;
@@ -53,7 +53,7 @@
 
 @layer utilities {
   .text-gradient {
-    background: linear-gradient(135deg, hsl(var(--primary)), hsl(160 84% 39%));
+    background: linear-gradient(135deg, hsl(12 76% 61%), hsl(25 90% 55%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -61,24 +61,17 @@
   }
 
   .glass {
-    background: hsl(var(--background) / 0.8);
+    background: hsl(var(--background) / 0.85);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid hsl(var(--border) / 0.5);
+    border-bottom: 1px solid hsl(var(--border) / 0.7);
   }
 
   .glow {
-    box-shadow: 0 0 20px hsl(var(--primary) / 0.15);
+    box-shadow: 0 4px 24px hsl(20 14% 15% / 0.06), 0 1px 4px hsl(20 14% 15% / 0.04);
   }
 
   .glow-lg {
-    box-shadow: 0 0 40px hsl(var(--primary) / 0.2);
-  }
-
-  .grid-pattern {
-    background-image:
-      linear-gradient(hsl(var(--border) / 0.5) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--border) / 0.5) 1px, transparent 1px);
-    background-size: 60px 60px;
+    box-shadow: 0 8px 40px hsl(20 14% 15% / 0.08), 0 2px 8px hsl(20 14% 15% / 0.04);
   }
 }
