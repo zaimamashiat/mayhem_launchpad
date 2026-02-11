@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronDown } from "lucide-react";
 
 const stats = [
-  { value: "150+", label: "Projects Delivered" },
-  { value: "50+", label: "Happy Clients" },
+  { value: "50+", label: "Projects" },
+  // { value: "50+", label: "Happy Clients" },
   { value: "99.9%", label: "Uptime Guarantee" },
   { value: "24/7", label: "Support" },
 ];
