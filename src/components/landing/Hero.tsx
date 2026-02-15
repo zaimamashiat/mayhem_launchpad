@@ -43,15 +43,6 @@ export default function Hero() {
           animate="show"
           className="text-center max-w-5xl mx-auto"
         >
-          {/* badge */}
-          <motion.div
-            variants={item}
-            className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-border/60 bg-secondary/60 backdrop-blur text-sm text-muted-foreground mb-10 shadow-sm"
-          >
-            <Sparkles className="h-4 w-4 text-primary" />
-            Building Tomorrow’s Solutions Today
-          </motion.div>
-
           {/* heading */}
           <motion.h1
             variants={item}
@@ -59,7 +50,7 @@ export default function Hero() {
           >
             We Engineer Digital
             <br />
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent">
               Experiences
             </span>
             <br />
@@ -112,10 +103,7 @@ export default function Hero() {
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 p-8 rounded-3xl border border-border/50 bg-card/60 backdrop-blur shadow-xl">
             {stats.map((stat) => (
-              <div
-                key={stat.label}
-                className="text-center space-y-2"
-              >
+              <div key={stat.label} className="text-center space-y-2">
                 <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                   {stat.value}
                 </div>
