@@ -11,9 +11,9 @@ const team = [
   {
     name: "Ahmed Awsaf",
     role: "CEO & Co-Founder",
-    image: "/team/ahmed.jpg",
+    image: "/team/awsaf.jpg",
     initials: "AA",
-    bio: "Visionary leader with 15+ years shaping digital products across fintech and healthcare.",
+    bio: "Visionary leader with 5+ years of experience shaping digital products across tech and business.",
   },
   {
     name: "Zaima Mashiat Nabi",
@@ -23,34 +23,35 @@ const team = [
     bio: "AI expert building intelligent systems and scalable data pipelines.",
   },
   {
-    name: "James Rodriguez",
-    role: "Lead Developer",
-    image: "/team/james.jpg",
-    initials: "JR",
+    name: "Utshob Bose",
+    role: "Lead Full-Stack Developer",
+    image: "/team/bose.jpg",
+    initials: "UB",
     bio: "Code craftsman specializing in performant and elegant solutions.",
   },
+  // {
+  //   name: "Emily Park",
+  //   role: "Design Director",
+  //   image: "/team/emily.jpg",
+  //   initials: "EP",
+  //   bio: "UX strategist transforming complexity into clarity.",
+  // },
   {
-    name: "Emily Park",
-    role: "Design Director",
-    image: "/team/emily.jpg",
-    initials: "EP",
-    bio: "UX strategist transforming complexity into clarity.",
-  },
-  {
-    name: "David Kim",
-    role: "Cloud Architect",
-    image: "/team/david.jpg",
-    initials: "DK",
+    name: "Ibtisum Jaman Aornob",
+    role: "Dev-ops & Cloud Architect",
+    image: "/team/jaman.jpg",
+    initials: "IJA",
     bio: "Infrastructure specialist focused on resilient cloud-native systems.",
-  },
-  {
-    name: "Maya Johnson",
-    role: "AI Engineer",
-    image: "/team/maya.jpg",
-    initials: "MJ",
-    bio: "ML engineer building intelligent automation and model-driven features.",
-  },
+  }
 ];
+//   {
+//     name: "Maya Johnson",
+//     role: "AI Engineer",
+//     image: "/team/maya.jpg",
+//     initials: "MJ",
+//     bio: "ML engineer building intelligent automation and model-driven features.",
+//   },
+// ];
 
 const container = {
   hidden: { opacity: 0 },
