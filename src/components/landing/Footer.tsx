@@ -19,7 +19,12 @@ const Footer = () => {
       <div className="container mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="lg:col-span-1">
-            <span className="text-2xl font-bold text-gradient">MAYHEM</span>
+              <img
+                src="/Solid_Logo.svg"
+                alt="Mayhem Logo"
+                className="h-12 w-auto mb-3"
+              />
+              <span className="text-2xl font-bold text-gradient">MAYHEM</span>
             <p className="text-muted-foreground text-sm mt-4 leading-relaxed">
               Building the future of technology, one innovative solution at a
               time.

@@ -35,7 +35,7 @@ const contactSchema = z.object({
 type ContactFormData = z.infer<typeof contactSchema>;
 
 const contactInfo = [
-  { icon: Mail, label: "Email", value: "hello@mayhembangladesh.dev" },
+  { icon: Mail, label: "Email", value: "mayhembangladesh@gmail.com" },
   { icon: Phone, label: "Phone", value: "+88 016 3266 3362" },
   { icon: MapPin, label: "Location", value: "Gulshan,Dhaka, Bangladesh" },
 ];

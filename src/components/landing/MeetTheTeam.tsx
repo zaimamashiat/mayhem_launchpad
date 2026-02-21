@@ -14,6 +14,11 @@ const team = [
     image: "/team/awsaf.jpg",
     initials: "AA",
     bio: "Visionary leader with 5+ years of experience shaping digital products across tech and business.",
+    socials: {
+      email: "officialawsaf@gmail.com",
+      linkedin: "https://www.linkedin.com/in/awsaf-ahmed/",
+      github: "https://github.com/AhmedAwsaf",
+    },
   },
   {
     name: "Zaima Mashiat Nabi",
@@ -21,6 +26,11 @@ const team = [
     image: "/team/zaima.jpeg",
     initials: "ZMN",
     bio: "AI expert building intelligent systems and scalable data pipelines.",
+    socials: {
+      email: "zaimamashiatnabi01@gmail.com",
+      linkedin: "https://www.linkedin.com/in/zaimamashiat/",
+      github: "https://github.com/zaimamashiat",
+    },
   },
   {
     name: "Utshob Bose",
@@ -28,21 +38,24 @@ const team = [
     image: "/team/bose.jpg",
     initials: "UB",
     bio: "Code craftsman specializing in performant and elegant solutions.",
+    socials: {
+      email: "utshob.bose.2015@gmail.com",
+      linkedin: "https://www.linkedin.com/in/utshob-bose-135812373/",
+      github: "https://github.com/utshobbose",
+    },
   },
-  // {
-  //   name: "Emily Park",
-  //   role: "Design Director",
-  //   image: "/team/emily.jpg",
-  //   initials: "EP",
-  //   bio: "UX strategist transforming complexity into clarity.",
-  // },
   {
     name: "Ibtisum Jaman Aornob",
     role: "Dev-ops & Cloud Architect",
     image: "/team/jaman.jpg",
     initials: "IJA",
     bio: "Infrastructure specialist focused on resilient cloud-native systems.",
-  }
+    socials: {
+      email: "aornobjaman5@gmail.com",
+      linkedin: "https://www.linkedin.com/in/ibtisum-jaman-276983289/",
+      github: "https://github.com/gojo83",
+    },
+  },
 ];
 //   {
 //     name: "Maya Johnson",
@@ -165,16 +178,22 @@ export default function MeetTheTeam() {
 
                   {/* Social Icons */}
                   <div className="flex gap-4 pt-3">
+                  <a href={`mailto:${member.socials.email}`}>
                     <IconButton label="Email">
                       <Mail className="h-4 w-4" />
                     </IconButton>
+                  </a>
+                  <a href={member.socials.linkedin} target="_blank" rel="noopener noreferrer">
                     <IconButton label="LinkedIn">
                       <Linkedin className="h-4 w-4" />
                     </IconButton>
+                  </a>
+                  <a href={member.socials.github} target="_blank" rel="noopener noreferrer">
                     <IconButton label="GitHub">
                       <Github className="h-4 w-4" />
                     </IconButton>
-                  </div>
+                  </a>
+                </div>
                 </CardContent>
               </Card>
             </motion.div>

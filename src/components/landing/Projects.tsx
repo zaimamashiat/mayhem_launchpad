@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 const projects = [
 {
   title: "Barobi Design",
+  image: "public/projects/barobi.jpg",
   category: "Bathroom • Kitchen • Sanitary Solutions",
   description:
     "Global leader with 30+ years of excellence delivering high-end bathroom, kitchen, and plumbing solutions, blending innovative design, sustainability, and award-winning craftsmanship.",
@@ -18,6 +19,7 @@ const projects = [
 
   {
     title: "Dr. Ashfaque Nabi",
+    image: "public/projects/ashfaqnabi.jpg",
     category: "Medical Portfolio",
     description:
       "Professional medical profile and service portal featuring doctor credentials, specialties, and patient information access.",
@@ -27,12 +29,13 @@ const projects = [
       "linear-gradient(135deg, hsl(220 80% 55% / 0.18), hsl(270 70% 55% / 0.18))",
   },
   {
-    title: "ShopSphere",
-    category: "E-Commerce",
+    title: "Aalooc Media",
+    image: "public/projects/aloocmedia.jpg",
+    category: "Digital Media Website",
     description:
-      "High-volume commerce engine with AI recommendations, live inventory sync, and fault-tolerant checkout pipelines.",
-    tags: ["Vue.js", "Go", "Kubernetes", "GraphQL"],
-    link: "#",
+      "A creative studio dedicated to graphic design, video editing, animation, illustration, and 3D modelling. ",
+    tags: ["3D", "Animation", "Illustration", "Creative Studio"],
+    link: "https://aaloocmedia.netlify.app",
     gradient:
       "linear-gradient(135deg, hsl(25 90% 55% / 0.18), hsl(340 75% 55% / 0.18))",
   },
@@ -76,16 +79,30 @@ export default function Projects() {
               <Card className="rounded-2xl overflow-hidden border shadow-sm hover:shadow-2xl transition-all duration-300 h-full flex flex-col">
                 {/* Gradient Hero */}
                 <div
-                    className="relative h-52 flex items-end p-6"
-                    style={{ background: project.gradient }}
-                >
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-[2px]" />
-
-                  <div className="relative z-10">
+  className="relative h-52 flex items-end p-6"
+  style={{
+    backgroundImage: `url(${project.image})`,
+    backgroundSize: "cover",
+    backgroundPosition: "top center",
+  }}
+>
+  {/* dark overlay so text stays readable */}
+  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-all duration-300" />
+                    <div className="relative z-10">
                     <Badge variant="secondary" className="mb-3 rounded-full">
                       {project.category}
                     </Badge>
-                    <h3 className="text-2xl font-bold tracking-tight">
+                    <h3
+                      className="text-2xl font-bold tracking-tight"
+                      style={{
+                        display: "inline-block",
+                        background: "hsl(262 83% 58%)",
+                        color: "#ffffff",
+                        padding: "4px 14px",
+                        borderRadius: "999px",
+                        fontSize: "0.875rem",
+                      }}
+                    >
                       {project.title}
                     </h3>
                   </div>
