@@ -101,7 +101,7 @@ export default function Hero() {
           transition={{ delay: 0.6, duration: 0.8 }}
           className="mt-24 max-w-4xl mx-auto"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 p-8 rounded-3xl border border-border/50 bg-card/60 backdrop-blur shadow-xl">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 p-8 rounded-3xl border border-border/50 bg-card/60 backdrop-blur shadow-xl mb-9">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center space-y-2">
                 <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">

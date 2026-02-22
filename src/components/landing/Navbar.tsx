@@ -45,7 +45,7 @@ export default function Navbar() {
     <>
       {/* Floating Oval Bar */}
       <motion.nav
-        initial={{ y: -80, opacity: 0 }}
+        initial={{ y: -80, opacity: 1 }}
         animate={{ y: 0, opacity: 1 }}
         className="fixed top-4 inset-x-0 z-50 flex justify-center px-4"
       >
@@ -53,10 +53,16 @@ export default function Navbar() {
           className={`w-full max-w-5xl relative flex items-center justify-between px-6 md:px-8 py-3 rounded-full border shadow-lg backdrop-blur-xl transition-all duration-300 bg-transparent border-white/20`}
         >
           {/* Logo Top Left */}
-          <a href="#" className="text-lg md:text-xl font-bold tracking-tight">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
-              MAYHEM
-            </span>
+          <a href="#" className="text-lg md:text-xl font-bold tracking-tight flex items-center">
+          <img
+                src="/Solid_Logo_light_purple.svg"
+                alt="Mayhem Logo"
+                className="h-8 w-auto mr-4"
+              />
+            <h6 className="bg-clip-text">
+              <h6>MAYHEM</h6>
+              <h6 className="text-xs p-0 m-0">SOFTWARES</h6>
+            </h6>
           </a>
 
           {/* Center Desktop Links */}
@@ -110,8 +116,8 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="fixed top-24 left-1/2 -translate-x-1/2 z-40 w-[92%] max-w-md rounded-3xl border backdrop-blur-xl bg-background/90 shadow-2xl md:hidden"
-          >
+            className="fixed top-24 inset-x-0 mx-auto z-40 w-[92%] max-w-md rounded-3xl border backdrop-blur-xl bg-background/90 shadow-2xl md:hidden"
+          >          
             <div className="p-4 space-y-1">
               {navLinks.map((link, i) => (
                 <motion.a
