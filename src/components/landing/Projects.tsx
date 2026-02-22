@@ -5,14 +5,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-} from "@/components/ui/alert-dialog";
+  Dialog,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 import { useState } from "react";
 
@@ -43,9 +41,9 @@ const projects: Project[] = [
     title: "Barobi Design",
     image: "projects/barobi.png",
     gallery: [
-      " projects/barobi-2.jpg",
-      " projects/barobi-3.jpg",
-      " projects/barobi-4.jpg",
+      " projects/barobi1.jpg",
+      " projects/barobi2.jpg",
+      " projects/barobi3.jpg",
     ],
     category: "Bathroom • Kitchen • Sanitary Solutions",
     description:
@@ -75,8 +73,8 @@ const projects: Project[] = [
     title: "Dr. Ashfaque Nabi",
     image: " projects/ashfaqnabi.jpg",
     gallery: [
-      " projects/ashfaq-2.jpg",
-      " projects/ashfaq-3.jpg",
+      " projects/dan1.jpg",
+      " projects/dan2.jpg",
     ],
     category: "Medical Portfolio",
     description:
@@ -106,9 +104,9 @@ const projects: Project[] = [
     title: "Aalooc Media",
     image: " projects/aloocmedia.jpg",
     gallery: [
-      " projects/alooc-2.jpg",
-      " projects/alooc-3.jpg",
-      " projects/alooc-4.jpg",
+      " projects/aloc1.jpg",
+      " projects/aloc2.jpg",
+      " projects/aloc3.jpg",
     ],
     category: "Digital Media Website",
     description:
@@ -138,9 +136,9 @@ const projects: Project[] = [
     title: "Masroors PLLC",
     image: " projects/masroors.png",
     gallery: [
-      " projects/masroors-2.jpg",
-      " projects/masroors-3.jpg",
-      " projects/masroors-4.jpg",
+      " projects/masroor1.jpg",
+      " projects/masroor2.jpg",
+      " projects/masroor3.jpg",
     ],
     category: "Civil & Structural Engineering",
     description:
@@ -260,8 +258,8 @@ export default function Projects() {
       </div>
 
       {/* ── Dialog ── */}
-      <AlertDialog open={!!selected} onOpenChange={(open) => { if (!open) setSelected(null); }}>
-        <AlertDialogContent className="max-w-2xl w-full p-0 gap-0 rounded-2xl overflow-hidden flex flex-col max-h-[90vh] border-0">
+      <Dialog open={!!selected} onOpenChange={(open) => { if (!open) setSelected(null); }}>
+        <DialogContent className="max-w-2xl w-full p-0 gap-0 rounded-2xl overflow-hidden flex flex-col max-h-[90vh] border-0">
 
           {/* Hero image */}
           {selected && (
@@ -300,14 +298,14 @@ export default function Projects() {
               <div className="overflow-y-auto flex-1 px-7 py-6 space-y-7">
 
                 {/* Title + description */}
-                <AlertDialogHeader>
-                  <AlertDialogTitle className="text-xl font-bold tracking-tight">
+                <DialogHeader>
+                  <DialogTitle className="text-xl font-bold tracking-tight">
                     {selected.title}
-                  </AlertDialogTitle>
+                  </DialogTitle>
                   <p className="text-sm text-muted-foreground leading-relaxed mt-1">
                     {selected.longDescription}
                   </p>
-                </AlertDialogHeader>
+                </DialogHeader>
 
                 {/* Meta row */}
                 <div className="grid grid-cols-2 gap-3">
@@ -377,25 +375,28 @@ export default function Projects() {
               </div>
 
               {/* Footer */}
-              <AlertDialogFooter className="px-7 py-5 border-t border-gray-100 bg-gray-50/60 flex-shrink-0">
-                <AlertDialogCancel className="rounded-xl">Close</AlertDialogCancel>
-                <AlertDialogAction asChild>
-                  <a
-                    href={selected.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-2 rounded-xl text-sm font-medium text-white transition-opacity hover:opacity-90"
-                    style={{ background: "hsl(262 83% 58%)" }}
-                  >
-                    Visit Site
-                    <ExternalLink className="h-4 w-4" />
-                  </a>
-                </AlertDialogAction>
-              </AlertDialogFooter>
+              <DialogFooter className="px-7 py-5 border-t border-gray-100 bg-gray-50/60 flex-shrink-0">
+  
+                <Button variant="outline" className="rounded-xl" onClick={() => setSelected(null)}>
+                  Close
+                </Button>
+
+                <a
+                  href={selected.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2 rounded-xl text-sm font-medium text-white transition-opacity hover:opacity-90"
+                  style={{ background: "hsl(262 83% 58%)" }}
+                >
+                  Visit Site
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+
+              </DialogFooter>
             </>
           )}
-        </AlertDialogContent>
-      </AlertDialog>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 }
