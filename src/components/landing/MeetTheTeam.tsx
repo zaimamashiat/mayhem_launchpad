@@ -115,7 +115,7 @@ export default function MeetTheTeam() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10"
+          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10"
         >
           {team.map((member) => (
             <motion.div
@@ -124,11 +124,11 @@ export default function MeetTheTeam() {
               whileHover={{ y: -12 }}
               transition={{ type: "spring", stiffness: 200 }}
             >
-              <Card className="group relative rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden">
+              <Card className="group h-full relative rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden">
                 {/* Animated gradient border */}
                 <div className="absolute inset-0 rounded-3xl p-[1px] bg-gradient-to-br from-primary/40 via-transparent to-primary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                <CardContent className="relative p-10 flex flex-col items-center text-center gap-5">
+                <CardContent className="relative p-10 flex flex-col items-center text-center gap-5 h-full">
                   {/* Avatar */}
                   <div className="relative">
                     <div className="absolute inset-0 rounded-full blur-2xl opacity-0 group-hover:opacity-60 transition-all duration-500 bg-primary/20" />
@@ -162,7 +162,7 @@ export default function MeetTheTeam() {
                   </div>
 
                   {/* Name + Role */}
-                  <div className="space-y-1">
+                  <div className="space-y-1 h-full">
                     <h3 className="text-xl font-semibold tracking-tight">
                       {member.name}
                     </h3>

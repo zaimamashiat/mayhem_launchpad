@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <title>Artboard 21 – Premium</title>
+  <defs>
+    <linearGradient id="premiumGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6b21a8;stop-opacity:1" />
+      <stop offset="45%" style="stop-color:#3b0764;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#0d0012;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="shineGrad" cx="35%" cy="30%" r="55%">
+      <stop offset="0%" style="stop-color:#c084fc;stop-opacity:0.18" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0" />
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <clipPath id="circleClip">
+      <circle cx="200.5" cy="199.75" r="186.5" />
+    </clipPath>
+  </defs>
+
+  <!-- Outer circle: glow -->
+  <circle cx="200.5" cy="199.75" r="186.5" fill="#4a0080" opacity="0.3" filter="url(#glow)" />
+
+  <!-- Outer circle: gradient fill -->
+  <circle cx="200.5" cy="199.75" r="186.5" fill="url(#premiumGrad)" />
+
+  <!-- Outer circle: shine -->
+  <circle cx="200.5" cy="199.75" r="186.5" fill="url(#shineGrad)" />
+
+  <!-- Inner spark shapes scaled to 65% around center -->
+  <g clip-path="url(#circleClip)" transform="translate(200.5, 199.75) scale(0.65) translate(-200.5, -199.75)">
+    <path fill="url(#premiumGrad)"
+      d="M183.54,255.59c-4.19,11.49-3.72,85.42-3.72,85.42S164,256.23,158.69,233.77C148.78,191.43,87.09,201,87.09,201s34-6.23,42.15-17.65c26.64-37.1,24.92-92.67,24.92-92.67s6.56,84.14,14,106.12c10,29.47,52,37.41,52,37.41S191.7,233.15,183.54,255.59Z"/>
+    <path fill="url(#premiumGrad)"
+      d="M275.42,209.68c-26.63,37.11-24.91,92.67-24.91,92.67s-6.56-84.13-14-106.12c-10-29.47-41.17-28.66-41.17-28.66s17.66-7.68,25.83-30.12C225.31,126,224.85,52,224.85,52S240.72,136.82,246,159.27c9.92,42.34,71.61,32.76,71.61,32.76S283.62,198.27,275.42,209.68Z"/>
+    <path fill="url(#shineGrad)"
+      d="M183.54,255.59c-4.19,11.49-3.72,85.42-3.72,85.42S164,256.23,158.69,233.77C148.78,191.43,87.09,201,87.09,201s34-6.23,42.15-17.65c26.64-37.1,24.92-92.67,24.92-92.67s6.56,84.14,14,106.12c10,29.47,52,37.41,52,37.41S191.7,233.15,183.54,255.59Z"/>
+    <path fill="url(#shineGrad)"
+      d="M275.42,209.68c-26.63,37.11-24.91,92.67-24.91,92.67s-6.56-84.13-14-106.12c-10-29.47-41.17-28.66-41.17-28.66s17.66-7.68,25.83-30.12C225.31,126,224.85,52,224.85,52S240.72,136.82,246,159.27c9.92,42.34,71.61,32.76,71.61,32.76S283.62,198.27,275.42,209.68Z"/>
+  </g>
+</svg>

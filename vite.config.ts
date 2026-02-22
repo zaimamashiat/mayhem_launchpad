@@ -11,6 +11,13 @@ export default defineConfig(({ mode }) => ({
     hmr: {
       overlay: false,
     },
+    watch: {
+      ignored: ['**/api/**'],
+    },
+  },
+  optimizeDeps: {
+    // Prevents Vite from trying to pre-bundle these Node-only libraries
+    exclude: ['@neondatabase/serverless', 'bcryptjs']
   },
   plugins: [react(), mode === "development" && componentTagger()].filter( Boolean),
   resolve: {
