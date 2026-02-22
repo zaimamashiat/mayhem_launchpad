@@ -1,9 +1,8 @@
-// api/contact.js
+// api/server.js
 import express from "express";
 import nodemailer from "nodemailer";
 import cors from "cors";
 import dotenv from "dotenv";
-import { createServer } from "http";
 
 dotenv.config();
 
@@ -47,5 +46,5 @@ app.post("/api/contact", async (req, res) => {
   }
 });
 
-/* 🔥 VERCEL HANDLER */
+/* VERCEL HANDLER */
 export default app;
