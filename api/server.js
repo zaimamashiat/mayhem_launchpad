@@ -1,16 +1,16 @@
+// api/contact.js
 import express from "express";
 import nodemailer from "nodemailer";
 import cors from "cors";
 import dotenv from "dotenv";
+import { createServer } from "http";
 
 dotenv.config();
 
 const app = express();
 
 /* CORS */
-app.use(cors({
-  origin: true
-}));
+app.use(cors({ origin: true }));
 
 app.use(express.json());
 
@@ -37,7 +37,7 @@ app.post("/api/contact", async (req, res) => {
       to: process.env.RECEIVER_EMAIL,
       replyTo: email,
       subject: `[Contact] ${subject}`,
-      html: `<b>Name:</b> ${name}<br/><b>Email:</b> ${email}<br/><b>Subject:</b> ${subject}<br/><p>${message}</p>`
+      html: `<b>Name:</b> ${name}<br/><b>Email:</b> ${email}<br/><b>Subject:</b> ${subject}<br/><p>${message}</p>`,
     });
 
     res.status(200).json({ success: true });
@@ -47,5 +47,5 @@ app.post("/api/contact", async (req, res) => {
   }
 });
 
-/* 🔥 SERVERLESS EXPORT (THIS is the magic) */
+/* 🔥 VERCEL HANDLER */
 export default app;
