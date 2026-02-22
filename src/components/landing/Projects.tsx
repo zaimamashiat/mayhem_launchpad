@@ -41,11 +41,11 @@ interface Project {
 const projects: Project[] = [
   {
     title: "Barobi Design",
-    image: "public/projects/barobi.png",
+    image: "projects/barobi.png",
     gallery: [
-      "public/projects/barobi-2.jpg",
-      "public/projects/barobi-3.jpg",
-      "public/projects/barobi-4.jpg",
+      " projects/barobi-2.jpg",
+      " projects/barobi-3.jpg",
+      " projects/barobi-4.jpg",
     ],
     category: "Bathroom • Kitchen • Sanitary Solutions",
     description:
@@ -73,10 +73,10 @@ const projects: Project[] = [
 
   {
     title: "Dr. Ashfaque Nabi",
-    image: "public/projects/ashfaqnabi.jpg",
+    image: " projects/ashfaqnabi.jpg",
     gallery: [
-      "public/projects/ashfaq-2.jpg",
-      "public/projects/ashfaq-3.jpg",
+      " projects/ashfaq-2.jpg",
+      " projects/ashfaq-3.jpg",
     ],
     category: "Medical Portfolio",
     description:
@@ -104,11 +104,11 @@ const projects: Project[] = [
 
   {
     title: "Aalooc Media",
-    image: "public/projects/aloocmedia.jpg",
+    image: " projects/aloocmedia.jpg",
     gallery: [
-      "public/projects/alooc-2.jpg",
-      "public/projects/alooc-3.jpg",
-      "public/projects/alooc-4.jpg",
+      " projects/alooc-2.jpg",
+      " projects/alooc-3.jpg",
+      " projects/alooc-4.jpg",
     ],
     category: "Digital Media Website",
     description:
@@ -136,11 +136,11 @@ const projects: Project[] = [
 
   {
     title: "Masroors PLLC",
-    image: "public/projects/masroors.png",
+    image: " projects/masroors.png",
     gallery: [
-      "public/projects/masroors-2.jpg",
-      "public/projects/masroors-3.jpg",
-      "public/projects/masroors-4.jpg",
+      " projects/masroors-2.jpg",
+      " projects/masroors-3.jpg",
+      " projects/masroors-4.jpg",
     ],
     category: "Civil & Structural Engineering",
     description:
