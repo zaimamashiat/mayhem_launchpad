@@ -46,5 +46,13 @@ app.post("/api/contact", async (req, res) => {
   }
 });
 
+/* LOCAL DEV — only listen when run directly, not on Vercel */
+if (process.env.NODE_ENV !== "production") {
+  const PORT = process.env.PORT ?? 5000;
+  app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
+}
+
 /* VERCEL HANDLER */
 export default app;
