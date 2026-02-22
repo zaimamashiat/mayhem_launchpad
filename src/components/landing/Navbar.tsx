@@ -54,15 +54,15 @@ export default function Navbar() {
         >
           {/* Logo Top Left */}
           <a href="#" className="text-lg md:text-xl font-bold tracking-tight flex items-center">
-          <img
-                src="/Solid_Logo_light_purple.svg"
-                alt="Mayhem Logo"
-                className="h-8 w-auto mr-4"
-              />
+            <img
+              src="/Solid_Logo_light_purple.svg"
+              alt="Mayhem Logo"
+              className="h-8 w-auto mr-4"
+            />
             <h6 className="bg-clip-text">
-              <h6>MAYHEM</h6>
-              <h6 className="text-xs p-0 m-0">SOFTWARES</h6>
-            </h6>
+  <h6 className="p-0 m-0 leading-none"style={{ fontSize: '1.4rem' }}>MAYHEM</h6>
+  <h6 className="p-0 m-0 leading-none" style={{ fontSize: '0.5rem' }}>SOFTWARES {' '} BANGLADESH</h6>
+</h6>
           </a>
 
           {/* Center Desktop Links */}
@@ -71,11 +71,10 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className={`relative text-sm transition-colors ${
-                  active === link.href
+                className={`relative text-sm transition-colors ${active === link.href
                     ? "text-foreground"
                     : "text-muted-foreground hover:text-foreground"
-                }`}
+                  }`}
               >
                 {link.label}
                 {active === link.href && (
@@ -117,7 +116,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             className="fixed top-24 inset-x-0 mx-auto z-40 w-[92%] max-w-md rounded-3xl border backdrop-blur-xl bg-background/90 shadow-2xl md:hidden"
-          >          
+          >
             <div className="p-4 space-y-1">
               {navLinks.map((link, i) => (
                 <motion.a
@@ -127,11 +126,10 @@ export default function Navbar() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05 }}
                   onClick={() => setIsOpen(false)}
-                  className={`block py-3 px-4 rounded-2xl text-sm transition-colors ${
-                    active === link.href
+                  className={`block py-3 px-4 rounded-2xl text-sm transition-colors ${active === link.href
                       ? "bg-primary/10 text-primary"
                       : "text-muted-foreground hover:text-foreground hover:bg-accent"
-                  }`}
+                    }`}
                 >
                   {link.label}
                 </motion.a>
