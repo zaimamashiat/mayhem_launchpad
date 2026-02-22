@@ -3,10 +3,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronDown, Sparkles } from "lucide-react";
 
 const stats = [
-  { value: "50+", label: "Projects" },
-  { value: "99.9%", label: "Uptime Guarantee" },
-  { value: "24/7", label: "Support" },
-  { value: "AI‑First", label: "Approach" },
+  { value: "50+", label: "Enterprise & Startup Clients" },
+  { value: "99.9%", label: "Infrastructure Uptime" },
+  { value: "24/7", label: "Monitoring & Support" },
+  { value: "100%", label: "Client Satisfaction Focus" },
 ];
 
 const container = {

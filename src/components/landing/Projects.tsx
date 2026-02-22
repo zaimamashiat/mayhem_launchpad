@@ -38,11 +38,10 @@ interface Project {
 }
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
-
 const projects: Project[] = [
   {
     title: "Barobi Design",
-    image: "public/projects/barobi.jpg",
+    image: "public/projects/barobi.png",
     gallery: [
       "public/projects/barobi-2.jpg",
       "public/projects/barobi-3.jpg",
@@ -50,12 +49,13 @@ const projects: Project[] = [
     ],
     category: "Bathroom • Kitchen • Sanitary Solutions",
     description:
-      "Global leader with 30+ years of excellence delivering high-end bathroom, kitchen, and plumbing solutions.",
+      "A globally recognised brand with 30+ years of excellence in premium bathroom, kitchen, and sanitary solutions.",
     longDescription:
-      "Barobi Design is a globally recognised brand with over three decades of expertise in premium bathroom and kitchen solutions. The project involved building a comprehensive enterprise-grade digital platform to showcase their award-winning product lines, highlight their sustainable manufacturing practices, and provide seamless product discovery for both trade professionals and end consumers. The platform integrates multi-language support, a rich product catalogue, and a dealer locator.",
-    tags: ["Enterprise", "Product Showcase", "Global Brand", "Sustainable Design"],
+      "Mayhem Bangladesh partnered with Barobi Design to engineer a robust, enterprise-grade digital platform that reflects their premium global brand identity. Our scope focused on building a scalable product discovery experience, optimising performance for high-traffic usage, and ensuring the platform supports international audiences through multilingual capabilities. The solution was designed with long-term scalability, SEO performance, and maintainability in mind, supporting both trade professionals and end customers.",
+    tags: ["Enterprise Platform", "Scalable Architecture", "Global Brand", "SEO"],
     link: "https://www.barobidesign.com.bd/",
-    gradient: "linear-gradient(135deg, hsl(160 80% 40% / 0.18), hsl(190 90% 45% / 0.18))",
+    gradient:
+      "linear-gradient(135deg, hsl(160 80% 40% / 0.18), hsl(190 90% 45% / 0.18))",
     meta: {
       year: "2024",
       client: "Barobi Design Ltd.",
@@ -63,42 +63,45 @@ const projects: Project[] = [
       teamSize: "4 members",
     },
     highlights: [
-      "Full product catalogue with 500+ SKUs",
-      "Multi-language & RTL support",
-      "Integrated dealer & showroom locator",
-      "Sustainable design certifications showcase",
-      "SEO-optimised architecture with 95+ Lighthouse score",
+      "Designed and developed a scalable enterprise web platform",
+      "Implemented performance-focused architecture for fast load times",
+      "Built multilingual-ready infrastructure for international audiences",
+      "Optimised SEO and technical structure for high search visibility",
+      "Delivered a future-proof solution aligned with brand growth",
     ],
   },
-  // {
-  //   title: "Dr. Ashfaque Nabi",
-  //   image: "public/projects/ashfaqnabi.jpg",
-  //   gallery: [
-  //     "public/projects/ashfaq-2.jpg",
-  //     "public/projects/ashfaq-3.jpg",
-  //   ],
-  //   category: "Medical Portfolio",
-  //   description:
-  //     "Professional medical profile and service portal featuring doctor credentials, specialties, and patient information access.",
-  //   longDescription:
-  //     "A bespoke digital presence for a senior medical professional, combining a credentialed profile with a patient-facing service portal. The platform communicates specialties, qualifications, published research, and clinic schedules in a clean, trustworthy interface. Built with accessibility and mobile responsiveness as core requirements, it serves both referring physicians and patients seeking appointment information.",
-  //   tags: ["Web", "Profile", "Healthcare", "Responsive"],
-  //   link: "https://drashfaquenabi.onrender.com/",
-  //   gradient: "linear-gradient(135deg, hsl(220 80% 55% / 0.18), hsl(270 70% 55% / 0.18))",
-  //   meta: {
-  //     year: "2023",
-  //     client: "Dr. Ashfaque Nabi",
-  //     location: "Chittagong, Bangladesh",
-  //     teamSize: "2 members",
-  //   },
-  //   highlights: [
-  //     "WCAG 2.1 AA accessibility compliant",
-  //     "Dynamic appointment & schedule section",
-  //     "Published research & credentials display",
-  //     "Optimised for mobile-first patient access",
-  //     "Secure contact form with spam protection",
-  //   ],
-  // },
+
+  {
+    title: "Dr. Ashfaque Nabi",
+    image: "public/projects/ashfaqnabi.jpg",
+    gallery: [
+      "public/projects/ashfaq-2.jpg",
+      "public/projects/ashfaq-3.jpg",
+    ],
+    category: "Medical Portfolio",
+    description:
+      "A professional digital presence for a senior medical consultant serving patients and referring physicians.",
+    longDescription:
+      "Mayhem Bangladesh delivered a tailored digital solution for a healthcare professional, focusing on trust, clarity, and accessibility. The platform was designed to clearly communicate credentials, services, and availability while ensuring a smooth experience across devices. Special emphasis was placed on accessibility standards, mobile usability, and secure communication to meet the expectations of both patients and medical peers.",
+    tags: ["Healthcare", "Accessibility", "Responsive Design", "Web Platform"],
+    link: "https://drashfaquenabi.onrender.com/",
+    gradient:
+      "linear-gradient(135deg, hsl(220 80% 55% / 0.18), hsl(270 70% 55% / 0.18))",
+    meta: {
+      year: "2023",
+      client: "Dr. Ashfaque Nabi",
+      location: "Chittagong, Bangladesh",
+      teamSize: "2 members",
+    },
+    highlights: [
+      "Delivered a clean, trust-focused healthcare web experience",
+      "Built with accessibility and mobile-first principles",
+      "Structured information architecture for clarity and usability",
+      "Implemented secure communication and contact workflows",
+      "Optimised for reliability and long-term maintainability",
+    ],
+  },
+
   {
     title: "Aalooc Media",
     image: "public/projects/aloocmedia.jpg",
@@ -109,12 +112,13 @@ const projects: Project[] = [
     ],
     category: "Digital Media Website",
     description:
-      "A creative studio dedicated to graphic design, video editing, animation, illustration, and 3D modelling.",
+      "A creative studio specialising in graphic design, animation, video editing, illustration, and 3D modelling.",
     longDescription:
-      "Aalooc Media required a visually-led website to reflect their identity as a cutting-edge creative studio. The platform showcases their full range of services — from motion graphics and 3D modelling to brand identity and illustration — with an immersive portfolio section, animated transitions, and a compelling services breakdown. The site acts as both a portfolio and a lead-generation tool for prospective clients across South Asia and beyond.",
-    tags: ["3D", "Animation", "Illustration", "Creative Studio"],
+      "Mayhem Bangladesh collaborated with Aalooc Media to craft a visually-driven digital platform that aligns with their creative identity while maintaining technical excellence. Our work balanced immersive visuals with performance optimisation, ensuring fast load times and smooth interactions. The website serves as both a portfolio and a conversion-focused platform, supporting the client’s growth and outreach goals.",
+    tags: ["Creative Platform", "Performance Optimisation", "Interactive UI", "Brand Showcase"],
     link: "https://aaloocmedia.netlify.app",
-    gradient: "linear-gradient(135deg, hsl(25 90% 55% / 0.18), hsl(340 75% 55% / 0.18))",
+    gradient:
+      "linear-gradient(135deg, hsl(25 90% 55% / 0.18), hsl(340 75% 55% / 0.18))",
     meta: {
       year: "2024",
       client: "Aalooc Media",
@@ -122,45 +126,46 @@ const projects: Project[] = [
       teamSize: "3 members",
     },
     highlights: [
-      "Immersive animated portfolio gallery",
-      "Services section with interactive breakdowns",
-      "3D asset previews embedded in-page",
-      "Lead capture with CRM integration",
-      "Sub-second load times on Netlify Edge",
+      "Engineered a visually rich yet performance-optimised platform",
+      "Implemented smooth animations without compromising load speed",
+      "Designed a scalable structure for future content expansion",
+      "Focused on lead generation and conversion pathways",
+      "Delivered reliable hosting and deployment architecture",
     ],
   },
+
   {
-    "title": "Masroors PLLC",
-    "image": "public/projects/masroors.jpg",
-    "gallery": [
+    title: "Masroors PLLC",
+    image: "public/projects/masroors.png",
+    gallery: [
       "public/projects/masroors-2.jpg",
       "public/projects/masroors-3.jpg",
-      "public/projects/masroors-4.jpg"
+      "public/projects/masroors-4.jpg",
     ],
-    "category": "Civil & Structural Engineering",
-    "description": "Licensed engineering consultancy delivering PE-stamped structural solutions across telecom, industrial, residential, and commercial sectors in 8 US states.",
-    "longDescription": "MASROORS PLLC is a licensed civil and structural engineering consultancy headquartered in Chandler, Arizona, operating across AZ, CA, CO, NM, NV, OR, TX, and WA. The firm specialises in structural analysis and design across a wide range of materials — steel, concrete, wood, masonry, and cold-formed steel/unistrut — serving telecom towers, industrial facilities, residential builds, and commercial properties. Their work spans PE-stamped construction drawings, anchorage calculations, retrofit engineering, and custom mounting solutions, all delivered to meet state and county permitting requirements.",
-    "tags": ["Structural Engineering", "PE-Stamped", "Telecom", "Industrial", "Residential", "Commercial"],
-    "link": "https://www.masroors.com/",
-    "gradient": "linear-gradient(135deg, hsl(210 70% 45% / 0.18), hsl(195 80% 40% / 0.18))",
-    "meta": {
-      "year": "2023–Present",
-      "client": "Masroors PLLC",
-      "location": "Chandler, AZ (Licensed in 8 states)",
-      "teamSize": "Engineering team"
+    category: "Civil & Structural Engineering",
+    description:
+      "A licensed civil and structural engineering consultancy operating across multiple US states.",
+    longDescription:
+      "Mayhem Bangladesh supported Masroors PLLC by delivering a professional, credibility-driven digital presence aligned with the standards of regulated engineering services in the United States. The platform was designed to communicate technical authority, service breadth, and licensing coverage while remaining clean, fast, and easy to navigate. Our focus was on reliability, clarity, and long-term scalability to support ongoing business growth.",
+    tags: ["Professional Services", "Corporate Website", "International Client", "Scalable Web"],
+    link: "https://www.masroors.com/",
+    gradient:
+      "linear-gradient(135deg, hsl(210 70% 45% / 0.18), hsl(195 80% 40% / 0.18))",
+    meta: {
+      year: "2023–Present",
+      client: "Masroors PLLC",
+      location: "Chandler, AZ, USA",
+      teamSize: "Engineering team",
     },
-    "highlights": [
-      "Licensed to practice in AZ, CA, CO, NM, NV, OR, TX, and WA",
-      "Structural analysis & design in steel, concrete, wood, masonry, and cold-formed steel",
-      "PE-stamped drawings for telecom, industrial, residential, and commercial projects",
-      "Retrofit and structural modification services for existing structures",
-      "Custom mounting solutions and anchorage calculations",
-      "Delivered compliant foundation plans for prefab metal warehouses and agricultural facilities",
-      "Retaining wall structural evaluations using 2018 IBC standards"
-    ]
-  }
+    highlights: [
+      "Delivered a credibility-focused corporate web platform",
+      "Structured content to communicate complex technical services clearly",
+      "Built a scalable foundation for long-term updates and expansion",
+      "Ensured performance, security, and cross-device compatibility",
+      "Successfully supported an international, regulated-services client",
+    ],
+  },
 ];
-
 // ─── Main Component ───────────────────────────────────────────────────────────
 
 export default function Projects() {
@@ -256,7 +261,7 @@ export default function Projects() {
 
       {/* ── Dialog ── */}
       <AlertDialog open={!!selected} onOpenChange={(open) => { if (!open) setSelected(null); }}>
-        <AlertDialogContent className="max-w-2xl w-full p-0 gap-0 rounded-2xl overflow-hidden flex flex-col max-h-[90vh]">
+        <AlertDialogContent className="max-w-2xl w-full p-0 gap-0 rounded-2xl overflow-hidden flex flex-col max-h-[90vh] border-0">
 
           {/* Hero image */}
           {selected && (

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Globe, Smartphone, Cloud, ShieldCheck, Brain, GitBranch } from "lucide-react";
+import { Globe, Smartphone, Cloud, Database, Brain, GitBranch } from "lucide-react";
 
 const services = [
   {
@@ -21,10 +21,10 @@ const services = [
       "Cloud architecture, migration, and management services on AWS, Azure, and Google Cloud.",
   },
   {
-    icon: ShieldCheck,
-    title: "Cybersecurity",
+    icon: Database,
+    title: "ERP Systems",
     description:
-      "Comprehensive security audits, penetration testing, and threat monitoring to protect your assets.",
+      "Scalable ERP platforms that unify finance, HR, inventory, and operations into a single source of truth.",
   },
   {
     icon: Brain,
