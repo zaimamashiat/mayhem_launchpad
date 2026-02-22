@@ -10,26 +10,10 @@ import { Label } from "@/components/ui/label";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 
 const contactSchema = z.object({
-  name: z
-    .string()
-    .trim()
-    .min(2, "Name must be at least 2 characters")
-    .max(100),
-  email: z
-    .string()
-    .trim()
-    .email("Please enter a valid email")
-    .max(255),
-  subject: z
-    .string()
-    .trim()
-    .min(2, "Subject must be at least 2 characters")
-    .max(200),
-  message: z
-    .string()
-    .trim()
-    .min(10, "Message must be at least 10 characters")
-    .max(1000),
+  name: z.string().trim().min(2, "Name must be at least 2 characters").max(100),
+  email: z.string().trim().email("Please enter a valid email").max(255),
+  subject: z.string().trim().min(2, "Subject must be at least 2 characters").max(200),
+  message: z.string().trim().min(10, "Message must be at least 10 characters").max(1000),
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
@@ -37,8 +21,10 @@ type ContactFormData = z.infer<typeof contactSchema>;
 const contactInfo = [
   { icon: Mail, label: "Email", value: "mayhembangladesh@gmail.com" },
   { icon: Phone, label: "Phone", value: "+88 016 3266 3362" },
-  { icon: MapPin, label: "Location", value: "Gulshan,Dhaka, Bangladesh" },
+  { icon: MapPin, label: "Location", value: "Gulshan, Dhaka, Bangladesh" },
 ];
+
+const API_URL = import.meta.env.VITE_API_URL ?? "http://localhost:5000";
 
 const ContactForm = () => {
   const {
@@ -50,12 +36,27 @@ const ContactForm = () => {
     resolver: zodResolver(contactSchema),
   });
 
-  const onSubmit = async (_data: ContactFormData) => {
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    toast.success(
-      "Message sent successfully! We'll get back to you within 24 hours."
-    );
-    reset();
+  const onSubmit = async (data: ContactFormData) => {
+    try {
+      const res = await fetch(`${API_URL}/api/contact`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      const result = await res.json();
+
+      if (!res.ok) {
+        throw new Error(result?.error ?? "Something went wrong.");
+      }
+
+      toast.success("Message sent! We'll get back to you within 24 hours.");
+      reset();
+    } catch (error: unknown) {
+      const message =
+        error instanceof Error ? error.message : "Failed to send message.";
+      toast.error(message);
+    }
   };
 
   return (
@@ -122,9 +123,7 @@ const ContactForm = () => {
                   className="bg-card/50"
                 />
                 {errors.name && (
-                  <p className="text-sm text-destructive">
-                    {errors.name.message}
-                  </p>
+                  <p className="text-sm text-destructive">{errors.name.message}</p>
                 )}
               </div>
               <div className="space-y-2">
@@ -137,9 +136,7 @@ const ContactForm = () => {
                   className="bg-card/50"
                 />
                 {errors.email && (
-                  <p className="text-sm text-destructive">
-                    {errors.email.message}
-                  </p>
+                  <p className="text-sm text-destructive">{errors.email.message}</p>
                 )}
               </div>
             </div>
@@ -153,9 +150,7 @@ const ContactForm = () => {
                 className="bg-card/50"
               />
               {errors.subject && (
-                <p className="text-sm text-destructive">
-                  {errors.subject.message}
-                </p>
+                <p className="text-sm text-destructive">{errors.subject.message}</p>
               )}
             </div>
 
@@ -169,9 +164,7 @@ const ContactForm = () => {
                 className="bg-card/50 resize-none"
               />
               {errors.message && (
-                <p className="text-sm text-destructive">
-                  {errors.message.message}
-                </p>
+                <p className="text-sm text-destructive">{errors.message.message}</p>
               )}
             </div>
 
