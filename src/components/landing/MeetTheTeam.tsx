@@ -34,7 +34,7 @@ const team = [
   },
   {
     name: "Utshob Bose",
-    role: "Lead Full-Stack Developer",
+    role: "Full-Stack Developer & UI/UX Engineer",
     image: "/team/bose.jpg",
     initials: "UB",
     bio: "Code craftsman specializing in performant and elegant solutions.",
