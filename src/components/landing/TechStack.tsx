@@ -27,6 +27,8 @@ const technologies = [
   { name: "Scikit-learn", type: "AI" },
   { name: "LangChain", type: "AI" },
   { name: "n8n", type: "AI" },
+  { name: "Svelte Kit", type: "Frontend" },
+  {name: "Express.js", type: "Backend"},
 ];
 
 const filters = [
