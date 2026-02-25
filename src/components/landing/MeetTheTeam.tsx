@@ -57,14 +57,6 @@ const team = [
     },
   },
 ];
-//   {
-//     name: "Maya Johnson",
-//     role: "AI Engineer",
-//     image: "/team/maya.jpg",
-//     initials: "MJ",
-//     bio: "ML engineer building intelligent automation and model-driven features.",
-//   },
-// ];
 
 const container = {
   hidden: { opacity: 0 },
@@ -96,10 +88,14 @@ export default function MeetTheTeam() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
+          {/* SEO-safe H1 (useful if this section is the main page content) */}
+          <h1 className="sr-only">Meet the Team</h1>
+
           <Badge className="mb-4 text-sm px-4 py-1 rounded-full backdrop-blur-md">
             Our People
           </Badge>
 
+          {/* Visible heading */}
           <h2 className="text-4xl md:text-6xl font-bold mt-4 tracking-tight">
             Meet the Team
           </h2>
@@ -143,12 +139,11 @@ export default function MeetTheTeam() {
                             [member.name]: true,
                           }))
                         }
-                        className={`object-cover transition-all duration-700 ease-out
-                          ${
-                            loaded[member.name]
-                              ? "opacity-100 scale-100 blur-0"
-                              : "opacity-0 scale-110 blur-md"
-                          }`}
+                        className={`object-cover transition-all duration-700 ease-out ${
+                          loaded[member.name]
+                            ? "opacity-100 scale-100 blur-0"
+                            : "opacity-0 scale-110 blur-md"
+                        }`}
                       />
 
                       <AvatarFallback
@@ -178,22 +173,34 @@ export default function MeetTheTeam() {
 
                   {/* Social Icons */}
                   <div className="flex gap-4 pt-3">
-                  <a href={`mailto:${member.socials.email}`}>
-                    <IconButton label="Email">
-                      <Mail className="h-4 w-4" />
-                    </IconButton>
-                  </a>
-                  <a href={member.socials.linkedin} target="_blank" rel="noopener noreferrer">
-                    <IconButton label="LinkedIn">
-                      <Linkedin className="h-4 w-4" />
-                    </IconButton>
-                  </a>
-                  <a href={member.socials.github} target="_blank" rel="noopener noreferrer">
-                    <IconButton label="GitHub">
-                      <Github className="h-4 w-4" />
-                    </IconButton>
-                  </a>
-                </div>
+                    <a href={`mailto:${member.socials.email}`} aria-label="Email">
+                      <IconButton label="Email">
+                        <Mail className="h-4 w-4" />
+                      </IconButton>
+                    </a>
+
+                    <a
+                      href={member.socials.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="LinkedIn"
+                    >
+                      <IconButton label="LinkedIn">
+                        <Linkedin className="h-4 w-4" />
+                      </IconButton>
+                    </a>
+
+                    <a
+                      href={member.socials.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="GitHub"
+                    >
+                      <IconButton label="GitHub">
+                        <Github className="h-4 w-4" />
+                      </IconButton>
+                    </a>
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>
@@ -212,15 +219,15 @@ function IconButton({
   label: string;
 }) {
   return (
-    <div className="relative group/icon">
-      <button className="p-2 rounded-xl border border-white/10 bg-white/5 hover:bg-primary/10 transition-all duration-300">
+    <span className="relative group/icon inline-flex">
+      <span className="p-2 rounded-xl border border-white/10 bg-white/5 hover:bg-primary/10 transition-all duration-300 inline-flex">
         {children}
-      </button>
+      </span>
 
       {/* Tooltip */}
       <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs px-2 py-1 rounded-md bg-black text-white opacity-0 group-hover/icon:opacity-100 transition-opacity whitespace-nowrap">
         {label}
       </span>
-    </div>
+    </span>
   );
 }

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ChevronDown, Sparkles } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 
 const stats = [
   { value: "50+", label: "Enterprise & Startup Clients" },
@@ -31,8 +31,6 @@ export default function Hero() {
         <div className="absolute top-1/2 left-1/2 w-[900px] h-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[160px] bg-primary/10" />
         <div className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full blur-[140px] bg-secondary/20" />
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full blur-[140px] bg-primary/10" />
-
-        {/* subtle grid */}
         <div className="absolute inset-0 opacity-[0.06] bg-[linear-gradient(to_right,theme(colors.foreground)_1px,transparent_1px),linear-gradient(to_bottom,theme(colors.foreground)_1px,transparent_1px)] bg-[size:40px_40px]" />
       </div>
 
@@ -43,8 +41,13 @@ export default function Hero() {
           animate="show"
           className="text-center max-w-5xl mx-auto"
         >
-          {/* heading */}
-          <motion.h1
+          {/* SEO-safe H1 */}
+          <h1 className="sr-only">
+            We Engineer Digital Experiences That Move Businesses
+          </h1>
+
+          {/* Animated visual heading */}
+          <motion.h2
             variants={item}
             className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05] mb-8"
           >
@@ -55,15 +58,15 @@ export default function Hero() {
             </span>
             <br />
             That Move Businesses
-          </motion.h1>
+          </motion.h2>
 
           {/* subtext */}
           <motion.p
             variants={item}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12"
           >
-            Mayhem is a full‑service IT company delivering high‑impact web,
-            cloud, and AI solutions with production‑grade reliability and
+            Mayhem is a full-service IT company delivering high-impact web,
+            cloud, and AI solutions with production-grade reliability and
             design precision.
           </motion.p>
 

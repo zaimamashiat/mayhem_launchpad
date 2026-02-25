@@ -1,5 +1,11 @@
 import { motion } from "framer-motion";
-import { ExternalLink, MapPin, Calendar, Users, CheckCircle2 } from "lucide-react";
+import {
+  ExternalLink,
+  MapPin,
+  Calendar,
+  Users,
+  CheckCircle2,
+} from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -19,10 +25,10 @@ import { useState } from "react";
 interface Project {
   title: string;
   image: string;
-  gallery: string[];          // extra images shown in dialog
+  gallery: string[]; // extra images shown in dialog
   category: string;
   description: string;
-  longDescription: string;    // fuller copy for dialog body
+  longDescription: string; // fuller copy for dialog body
   tags: string[];
   link: string;
   gradient: string;
@@ -32,7 +38,7 @@ interface Project {
     location: string;
     teamSize: string;
   };
-  highlights: string[];       // bullet achievements
+  highlights: string[]; // bullet achievements
 }
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
@@ -41,9 +47,9 @@ const projects: Project[] = [
     title: "Barobi Design",
     image: "projects/barobi.png",
     gallery: [
-      " projects/barobi1.jpg",
-      " projects/barobi2.jpg",
-      " projects/barobi3.jpg",
+      "projects/barobi1.jpg",
+      "projects/barobi2.jpg",
+      "projects/barobi3.jpg",
     ],
     category: "Bathroom • Kitchen • Sanitary Solutions",
     description:
@@ -71,11 +77,8 @@ const projects: Project[] = [
 
   {
     title: "Dr. Ashfaque Nabi",
-    image: " projects/ashfaqnabi.jpg",
-    gallery: [
-      " projects/dan1.jpg",
-      " projects/dan2.jpg",
-    ],
+    image: "projects/ashfaqnabi.jpg",
+    gallery: ["projects/dan1.jpg", "projects/dan2.jpg"],
     category: "Medical Portfolio",
     description:
       "A professional digital presence for a senior medical consultant serving patients and referring physicians.",
@@ -102,18 +105,23 @@ const projects: Project[] = [
 
   {
     title: "Aalooc Media",
-    image: " projects/aloocmedia.jpg",
+    image: "projects/aloocmedia.jpg",
     gallery: [
-      " projects/aloc1.jpg",
-      " projects/aloc2.jpg",
-      " projects/aloc3.jpg",
+      "projects/aloc1.jpg",
+      "projects/aloc2.jpg",
+      "projects/aloc3.jpg",
     ],
     category: "Digital Media Website",
     description:
       "A creative studio specialising in graphic design, animation, video editing, illustration, and 3D modelling.",
     longDescription:
       "Mayhem Bangladesh collaborated with Aalooc Media to craft a visually-driven digital platform that aligns with their creative identity while maintaining technical excellence. Our work balanced immersive visuals with performance optimisation, ensuring fast load times and smooth interactions. The website serves as both a portfolio and a conversion-focused platform, supporting the client’s growth and outreach goals.",
-    tags: ["Creative Platform", "Performance Optimisation", "Interactive UI", "Brand Showcase"],
+    tags: [
+      "Creative Platform",
+      "Performance Optimisation",
+      "Interactive UI",
+      "Brand Showcase",
+    ],
     link: "https://aaloocmedia.netlify.app",
     gradient:
       "linear-gradient(135deg, hsl(25 90% 55% / 0.18), hsl(340 75% 55% / 0.18))",
@@ -134,18 +142,23 @@ const projects: Project[] = [
 
   {
     title: "Masroors PLLC",
-    image: " projects/masroors.png",
+    image: "projects/masroors.png",
     gallery: [
-      " projects/masroor1.jpg",
-      " projects/masroor2.jpg",
-      " projects/masroor3.jpg",
+      "projects/masroor1.jpg",
+      "projects/masroor2.jpg",
+      "projects/masroor3.jpg",
     ],
     category: "Civil & Structural Engineering",
     description:
       "A licensed civil and structural engineering consultancy operating across multiple US states.",
     longDescription:
       "Mayhem Bangladesh supported Masroors PLLC by delivering a professional, credibility-driven digital presence aligned with the standards of regulated engineering services in the United States. The platform was designed to communicate technical authority, service breadth, and licensing coverage while remaining clean, fast, and easy to navigate. Our focus was on reliability, clarity, and long-term scalability to support ongoing business growth.",
-    tags: ["Professional Services", "Corporate Website", "International Client", "Scalable Web"],
+    tags: [
+      "Professional Services",
+      "Corporate Website",
+      "International Client",
+      "Scalable Web",
+    ],
     link: "https://www.masroors.com/",
     gradient:
       "linear-gradient(135deg, hsl(210 70% 45% / 0.18), hsl(195 80% 40% / 0.18))",
@@ -164,6 +177,7 @@ const projects: Project[] = [
     ],
   },
 ];
+
 // ─── Main Component ───────────────────────────────────────────────────────────
 
 export default function Projects() {
@@ -172,7 +186,6 @@ export default function Projects() {
   return (
     <section id="projects" className="py-20 md:py-32 border-t">
       <div className="container mx-auto px-6">
-
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -181,10 +194,17 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <Badge className="mb-4 text-sm px-4 py-1 rounded-full">Portfolio</Badge>
+          {/* SEO-safe H1 (helps audits if this is the main page section) */}
+          <h1 className="sr-only">Featured Projects</h1>
+
+          <Badge className="mb-4 text-sm px-4 py-1 rounded-full">
+            Portfolio
+          </Badge>
+
           <h2 className="text-4xl md:text-6xl font-bold mt-3 mb-4 tracking-tight">
             Featured Projects
           </h2>
+
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Selected builds where design, scale, and engineering shake hands.
           </p>
@@ -237,15 +257,24 @@ export default function Projects() {
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     {project.description}
                   </p>
+
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
-                      <Badge key={tag} variant="outline" className="rounded-full text-xs">
+                      <Badge
+                        key={tag}
+                        variant="outline"
+                        className="rounded-full text-xs"
+                      >
                         {tag}
                       </Badge>
                     ))}
                   </div>
+
                   <div className="mt-auto pt-2">
-                    <Button variant="ghost" className="group/btn rounded-xl px-4 pointer-events-none">
+                    <Button
+                      variant="ghost"
+                      className="group/btn rounded-xl px-4 pointer-events-none"
+                    >
                       View Project
                       <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1" />
                     </Button>
@@ -258,9 +287,13 @@ export default function Projects() {
       </div>
 
       {/* ── Dialog ── */}
-      <Dialog open={!!selected} onOpenChange={(open) => { if (!open) setSelected(null); }}>
+      <Dialog
+        open={!!selected}
+        onOpenChange={(open) => {
+          if (!open) setSelected(null);
+        }}
+      >
         <DialogContent className="max-w-2xl w-full p-0 gap-0 rounded-2xl overflow-hidden flex flex-col max-h-[90vh] border-0">
-
           {/* Hero image */}
           {selected && (
             <>
@@ -296,7 +329,6 @@ export default function Projects() {
 
               {/* Scrollable body */}
               <div className="overflow-y-auto flex-1 px-7 py-6 space-y-7">
-
                 {/* Title + description */}
                 <DialogHeader>
                   <DialogTitle className="text-xl font-bold tracking-tight">
@@ -311,8 +343,8 @@ export default function Projects() {
                 <div className="grid grid-cols-2 gap-3">
                   {[
                     { icon: Calendar, label: "Year", value: selected.meta.year },
-                    { icon: Users,    label: "Team",     value: selected.meta.teamSize },
-                    { icon: MapPin,   label: "Location", value: selected.meta.location },
+                    { icon: Users, label: "Team", value: selected.meta.teamSize },
+                    { icon: MapPin, label: "Location", value: selected.meta.location },
                     { icon: CheckCircle2, label: "Client", value: selected.meta.client },
                   ].map(({ icon: Icon, label, value }) => (
                     <div
@@ -321,7 +353,9 @@ export default function Projects() {
                     >
                       <Icon className="h-4 w-4 text-purple-500 mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="text-[11px] font-medium text-gray-400 uppercase tracking-wider">{label}</p>
+                        <p className="text-[11px] font-medium text-gray-400 uppercase tracking-wider">
+                          {label}
+                        </p>
                         <p className="text-sm font-medium text-gray-800">{value}</p>
                       </div>
                     </div>
@@ -330,7 +364,9 @@ export default function Projects() {
 
                 {/* Tags */}
                 <div>
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Tech & Scope</p>
+                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">
+                    Tech & Scope
+                  </p>
                   <div className="flex flex-wrap gap-2">
                     {selected.tags.map((tag) => (
                       <Badge key={tag} variant="outline" className="rounded-full text-xs">
@@ -342,10 +378,15 @@ export default function Projects() {
 
                 {/* Highlights */}
                 <div>
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Highlights</p>
+                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">
+                    Highlights
+                  </p>
                   <ul className="space-y-2">
                     {selected.highlights.map((h) => (
-                      <li key={h} className="flex items-start gap-2.5 text-sm text-gray-700">
+                      <li
+                        key={h}
+                        className="flex items-start gap-2.5 text-sm text-gray-700"
+                      >
                         <CheckCircle2 className="h-4 w-4 text-purple-500 mt-0.5 flex-shrink-0" />
                         {h}
                       </li>
@@ -356,7 +397,9 @@ export default function Projects() {
                 {/* Gallery */}
                 {selected.gallery.length > 0 && (
                   <div>
-                    <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Gallery</p>
+                    <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">
+                      Gallery
+                    </p>
                     <div className="grid grid-cols-2 gap-3">
                       {selected.gallery.map((src, idx) => (
                         <div
@@ -376,8 +419,11 @@ export default function Projects() {
 
               {/* Footer */}
               <DialogFooter className="px-7 py-5 border-t border-gray-100 bg-gray-50/60 flex-shrink-0">
-  
-                <Button variant="outline" className="rounded-xl" onClick={() => setSelected(null)}>
+                <Button
+                  variant="outline"
+                  className="rounded-xl"
+                  onClick={() => setSelected(null)}
+                >
                   Close
                 </Button>
 
@@ -391,7 +437,6 @@ export default function Projects() {
                   Visit Site
                   <ExternalLink className="h-4 w-4" />
                 </a>
-
               </DialogFooter>
             </>
           )}

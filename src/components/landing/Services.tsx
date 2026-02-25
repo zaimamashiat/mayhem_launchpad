@@ -1,42 +1,49 @@
 import { motion } from "framer-motion";
-import { Globe, Smartphone, Cloud, Database, Brain, GitBranch } from "lucide-react";
+import {
+  Globe,
+  Smartphone,
+  Cloud,
+  Database,
+  Brain,
+  GitBranch,
+} from "lucide-react";
 
 const services = [
   {
     icon: Globe,
     title: "Web Development",
     description:
-      "Custom web applications built with modern frameworks, optimized for performance and scalability.",
+      "We build fast, secure web applications with modern frameworks—designed to scale as your business grows.",
   },
   {
     icon: Smartphone,
-    title: "Mobile Development",
+    title: "Mobile App Development",
     description:
-      "Native and cross-platform mobile apps that deliver seamless experiences across all devices.",
+      "Native and cross-platform mobile apps with smooth UX, reliable performance, and maintainable codebases.",
   },
   {
     icon: Cloud,
-    title: "Cloud Solutions",
+    title: "Cloud Engineering",
     description:
-      "Cloud architecture, migration, and management services on AWS, Azure, and Google Cloud.",
+      "Cloud architecture, migration, and ongoing management on AWS, Azure, or Google Cloud to reduce cost and improve reliability.",
   },
   {
     icon: Database,
-    title: "ERP Systems",
+    title: "ERP & Business Systems",
     description:
-      "Scalable ERP platforms that unify finance, HR, inventory, and operations into a single source of truth.",
+      "Custom ERP systems that connect finance, HR, inventory, and operations—so teams work from one source of truth.",
   },
   {
     icon: Brain,
     title: "AI & Machine Learning",
     description:
-      "Intelligent automation, predictive analytics, and custom ML models to drive business decisions.",
+      "Practical AI solutions like automation, forecasting, and analytics—built around your data and real business goals.",
   },
   {
     icon: GitBranch,
     title: "DevOps & Automation",
     description:
-      "CI/CD pipelines, infrastructure as code, and automated workflows for faster delivery.",
+      "CI/CD pipelines, infrastructure as code, and automated monitoring to ship faster with fewer incidents.",
   },
 ];
 
@@ -63,19 +70,26 @@ const Services = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
+          {/* SEO-safe H1 (keep ONLY if this is a standalone /services page or the audit page) */}
+          <h1 className="sr-only">
+            IT Services: Web Development, Mobile Apps, Cloud, AI, ERP, and DevOps
+          </h1>
+
           <span className="text-primary text-sm font-medium tracking-wider uppercase">
             What We Do
           </span>
+
           <h2 className="text-3xl md:text-5xl font-bold mt-3 mb-4">
-            Our Services
+            Our IT Services
           </h2>
+
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            From concept to deployment, we deliver end-to-end IT solutions
-            tailored to your business needs.
+            We design, build, and run digital products—from web and mobile apps
+            to cloud infrastructure, AI, ERP systems, and DevOps automation.
           </p>
         </motion.div>
 
-        <motion.div
+        <motion.ul
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -83,21 +97,23 @@ const Services = () => {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {services.map((service) => (
-            <motion.div
+            <motion.li
               key={service.title}
               variants={itemVariants}
-              className="group p-8 rounded-2xl border border-border/50 bg-card/50 hover:bg-card hover:glow transition-all duration-300"
+              className="group p-8 rounded-2xl border border-border/50 bg-card/50 hover:bg-card hover:glow transition-all duration-300 list-none"
             >
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
                 <service.icon className="h-6 w-6 text-primary" />
               </div>
+
               <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+
               <p className="text-muted-foreground leading-relaxed">
                 {service.description}
               </p>
-            </motion.div>
+            </motion.li>
           ))}
-        </motion.div>
+        </motion.ul>
       </div>
     </section>
   );
