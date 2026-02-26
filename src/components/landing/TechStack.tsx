@@ -20,6 +20,7 @@ const technologies = [
   { name: "PostgreSQL", type: "Database" },
   { name: "MongoDB", type: "Database" },
   { name: "GraphQL", type: "API" },
+  { name: "RESTful", type: "API" },
 
   { name: "TensorFlow", type: "AI" },
   { name: "PyTorch", type: "AI" },
