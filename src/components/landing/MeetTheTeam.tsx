@@ -39,7 +39,7 @@ const team = [
     initials: "UB",
     bio: "Code craftsman specializing in performant and elegant solutions.",
     socials: {
-      email: "utshob.bose.2015@gmail.com",
+      email: "officialutshob@gmail.com",
       linkedin: "https://www.linkedin.com/in/utshob-bose-135812373/",
       github: "https://github.com/utshobbose",
     },
