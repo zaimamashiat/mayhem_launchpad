@@ -10,7 +10,7 @@ import { Mail, Linkedin, Github } from "lucide-react";
 const team = [
   {
     name: "Ahmed Awsaf",
-    role: "CEO & Co-Founder",
+    role: "CEO & Founder",
     image: "/team/awsaf.jpg",
     initials: "AA",
     bio: "Visionary leader with 5+ years of experience shaping digital products across tech and business.",
