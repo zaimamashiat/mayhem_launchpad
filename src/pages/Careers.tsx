@@ -6,12 +6,6 @@ import { Button } from "@/components/ui/button";
 
 const openings = [
   {
-    title: "Senior Frontend Developer",
-    type: "Full-time",
-    location: "Dhaka / Remote",
-    description: "Build beautiful, performant web applications using React and modern tooling.",
-  },
-  {
     title: "Backend Engineer",
     type: "Full-time",
     location: "Dhaka",
