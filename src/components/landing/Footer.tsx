@@ -4,6 +4,7 @@ import {
   Facebook, 
   Linkedin
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const footerLinks = {
   services: [
@@ -14,7 +15,12 @@ const footerLinks = {
     "AI & ML",
     "DevOps",
   ],
-  company: ["About Us", "Careers", "Blog", "Press"],
+  company: [
+    { label: "Testimonials", href: "/testimonials" },
+    { label: "Careers", href: "/careers" },
+    { label: "Blog", href: "/blog" },
+    { label: "Products", href: "/products" },
+  ],
   legal: ["Privacy Policy", "Terms of Service", "Cookie Policy"],
 };
 
@@ -32,7 +38,7 @@ const Footer = () => {
               />
               <div>
                 <h6>MAYHEM</h6>
-                <h6 className="text-xs text-gray-700">
+                <h6 className="text-xs text-muted-foreground">
                   SOFTWARES Bangladesh
                 </h6>
               </div>
@@ -50,7 +56,7 @@ const Footer = () => {
               {footerLinks.services.map((link) => (
                 <li key={link}>
                   <a
-                    href="#services"
+                    href="/#services"
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {link}
@@ -64,14 +70,14 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Company</h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
-                <li key={link}>
-                  <a
-                    href="#"
+                <li key={link.label}>
+                  <Link
+                    to={link.href}
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1"
                   >
-                    {link}
+                    {link.label}
                     <ArrowUpRight className="h-3 w-3" />
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -94,13 +100,11 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Section */}
         <div className="border-t border-border/30 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Mayhem. All rights reserved.
           </p>
 
-          {/* Social Icons */}
           <div className="flex items-center gap-5">
             <a
               href="https://instagram.com/mayhembangladesh"
@@ -110,7 +114,6 @@ const Footer = () => {
             >
               <Instagram className="h-5 w-5" />
             </a>
-
             <a
               href="https://www.facebook.com/profile.php?id=61586382831769"
               target="_blank"
@@ -119,7 +122,6 @@ const Footer = () => {
             >
               <Facebook className="h-5 w-5" />
             </a>
-
             <a
               href="https://www.linkedin.com/company/mayhem-softwares/"
               target="_blank"
