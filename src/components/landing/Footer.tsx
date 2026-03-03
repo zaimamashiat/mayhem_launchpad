@@ -1,4 +1,9 @@
-import { ArrowUpRight } from "lucide-react";
+import { 
+  ArrowUpRight, 
+  Instagram, 
+  Facebook, 
+  Linkedin
+} from "lucide-react";
 
 const footerLinks = {
   services: [
@@ -19,18 +24,20 @@ const Footer = () => {
       <div className="container mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="lg:col-span-1">
-
             <div className="text-2xl font-bold flex items-center gap-3">
               <img
                 src="/Solid_Logo.svg"
                 alt="Mayhem Logo"
                 className="h-12 w-auto"
               />
-              <h6 className="bg-clip-text">
+              <div>
                 <h6>MAYHEM</h6>
-                <h6 className="text-xs p-0 m-0 text-gray-700">SOFTWARES Bangladesh</h6>
-              </h6>
+                <h6 className="text-xs text-gray-700">
+                  SOFTWARES Bangladesh
+                </h6>
+              </div>
             </div>
+
             <p className="text-muted-foreground text-sm mt-4 leading-relaxed">
               Building the future of technology, one innovative solution at a
               time.
@@ -87,28 +94,39 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Bottom Section */}
         <div className="border-t border-border/30 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Mayhem. All rights reserved.
           </p>
-          <div className="flex items-center gap-6">
+
+          {/* Social Icons */}
+          <div className="flex items-center gap-5">
             <a
-              href="#"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              href="https://instagram.com/mayhembangladesh"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              Twitter
+              <Instagram className="h-5 w-5" />
             </a>
+
             <a
-              href="#"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              href="https://www.facebook.com/profile.php?id=61586382831769"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              LinkedIn
+              <Facebook className="h-5 w-5" />
             </a>
+
             <a
-              href="#"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              href="https://www.linkedin.com/company/mayhem-softwares/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              GitHub
+              <Linkedin className="h-5 w-5" />
             </a>
           </div>
         </div>
