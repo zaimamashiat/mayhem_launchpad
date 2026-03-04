@@ -32,66 +32,54 @@ export default function Hero() {
       </div>
 
       <div className="container mx-auto px-6 relative">
-        {/* Static H1 for SEO / LLMs */}
-        <h1 className="sr-only">
-          Mayhem Softwares | We Engineer Digital Experiences That Move Businesses
-        </h1>
-
-        <motion.div
-          variants={container}
+        {/* Visible H1 for SEO */}
+        <motion.h1
+          variants={item}
           initial="hidden"
           animate="show"
-          className="text-center max-w-5xl mx-auto"
+          className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05] mb-8 text-center"
         >
-          {/* Animated H2 for visual display */}
-          <motion.h2
-            variants={item}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05] mb-8"
-          >
-            We Engineer Digital
-            <br />
-            <span className="bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent">
-              Experiences
-            </span>
-            <br />
-            That Move Businesses
-          </motion.h2>
+          Mayhem Softwares: We Engineer Digital{" "}
+          <span className="bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent">
+            Experiences
+          </span>{" "}
+          That Move Businesses
+        </motion.h1>
 
-          {/* Supporting paragraph */}
-          <motion.p
-            variants={item}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12"
-          >
-            Mayhem is a full-service IT company delivering high-impact web,
-            cloud, and AI solutions with production-grade reliability and
-            design precision.
-          </motion.p>
+        {/* Supporting paragraph */}
+        <motion.p
+          variants={item}
+          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 text-center"
+        >
+          Mayhem is a full-service IT company delivering high-impact web,
+          cloud, and AI solutions with production-grade reliability and
+          design precision.
+        </motion.p>
 
-          {/* Buttons */}
-          <motion.div
-            variants={item}
-            className="flex flex-col sm:flex-row gap-5 justify-center"
+        {/* Buttons */}
+        <motion.div
+          variants={item}
+          className="flex flex-col sm:flex-row gap-5 justify-center mb-24"
+        >
+          <Button
+            size="lg"
+            className="text-base px-10 rounded-2xl shadow-lg hover:shadow-xl transition"
+            asChild
           >
-            <Button
-              size="lg"
-              className="text-base px-10 rounded-2xl shadow-lg hover:shadow-xl transition"
-              asChild
-            >
-              <a href="#contact">
-                Start a Project
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
+            <a href="#contact">
+              Start a Project
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </a>
+          </Button>
 
-            <Button
-              variant="outline"
-              size="lg"
-              className="text-base px-10 rounded-2xl border-2"
-              asChild
-            >
-              <a href="#projects">View Our Work</a>
-            </Button>
-          </motion.div>
+          <Button
+            variant="outline"
+            size="lg"
+            className="text-base px-10 rounded-2xl border-2"
+            asChild
+          >
+            <a href="#projects">View Our Work</a>
+          </Button>
         </motion.div>
 
         {/* Stats card */}
@@ -99,7 +87,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
-          className="mt-24 max-w-4xl mx-auto"
+          className="max-w-4xl mx-auto"
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 p-8 rounded-3xl border border-border/50 bg-card/60 backdrop-blur shadow-xl mb-9">
             {stats.map((stat) => (
@@ -132,4 +120,3 @@ export default function Hero() {
     </section>
   );
 }
-//changed
