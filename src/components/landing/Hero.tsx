@@ -11,11 +11,7 @@ const stats = [
 
 const container = {
   hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.12,
-    },
-  },
+  show: { transition: { staggerChildren: 0.12 } },
 };
 
 const item = {
@@ -41,13 +37,8 @@ export default function Hero() {
           animate="show"
           className="text-center max-w-5xl mx-auto"
         >
-          {/* SEO-safe H1 */}
-          <h1 className="sr-only">
-            We Engineer Digital Experiences That Move Businesses
-          </h1>
-
-          {/* Animated visual heading */}
-          <motion.h2
+          {/* ✅ Visible SEO H1 */}
+          <motion.h1
             variants={item}
             className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05] mb-8"
           >
@@ -58,9 +49,9 @@ export default function Hero() {
             </span>
             <br />
             That Move Businesses
-          </motion.h2>
+          </motion.h1>
 
-          {/* subtext */}
+          {/* supporting text should NOT be another big heading */}
           <motion.p
             variants={item}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12"
@@ -110,9 +101,7 @@ export default function Hero() {
                 <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                   {stat.value}
                 </div>
-                <div className="text-sm text-muted-foreground">
-                  {stat.label}
-                </div>
+                <div className="text-sm text-muted-foreground">{stat.label}</div>
               </div>
             ))}
           </div>
