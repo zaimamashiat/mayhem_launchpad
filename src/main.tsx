@@ -1,11 +1,10 @@
-// main.tsx
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
-import Home from "./pages/Index"; // Your homepage
+import Home from "./pages/Index";
 import About from "./pages/Careers";
-import Services from "./pages/Index"; 
+import Services from "./pages/Index";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import Product from "./pages/Products";
@@ -13,7 +12,6 @@ import Testimonials from "./pages/Testimonials";
 
 import "./index.css";
 
-// Root rendering
 createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>

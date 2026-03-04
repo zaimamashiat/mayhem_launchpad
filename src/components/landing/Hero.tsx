@@ -1,3 +1,4 @@
+// Hero.tsx
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronDown } from "lucide-react";
@@ -22,7 +23,7 @@ const item = {
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
-      {/* layered glow background */}
+      {/* Layered glow background */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-1/2 left-1/2 w-[900px] h-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[160px] bg-primary/10" />
         <div className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full blur-[140px] bg-secondary/20" />
@@ -31,9 +32,9 @@ export default function Hero() {
       </div>
 
       <div className="container mx-auto px-6 relative">
-        {/* Static H1 for SEO */}
+        {/* Static H1 for SEO / LLMs */}
         <h1 className="sr-only">
-          We Engineer Digital Experiences That Move Businesses | Mayhem Bangladesh
+          Mayhem Softwares | We Engineer Digital Experiences That Move Businesses
         </h1>
 
         <motion.div
@@ -42,7 +43,7 @@ export default function Hero() {
           animate="show"
           className="text-center max-w-5xl mx-auto"
         >
-          {/* Motion H1 for visual display */}
+          {/* Animated H2 for visual display */}
           <motion.h2
             variants={item}
             className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05] mb-8"
@@ -56,6 +57,7 @@ export default function Hero() {
             That Move Businesses
           </motion.h2>
 
+          {/* Supporting paragraph */}
           <motion.p
             variants={item}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12"
@@ -65,6 +67,7 @@ export default function Hero() {
             design precision.
           </motion.p>
 
+          {/* Buttons */}
           <motion.div
             variants={item}
             className="flex flex-col sm:flex-row gap-5 justify-center"
@@ -91,7 +94,7 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* stats card */}
+        {/* Stats card */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -111,7 +114,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* scroll indicator */}
+      {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
