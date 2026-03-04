@@ -31,14 +31,19 @@ export default function Hero() {
       </div>
 
       <div className="container mx-auto px-6 relative">
+        {/* Static H1 for SEO */}
+        <h1 className="sr-only">
+          We Engineer Digital Experiences That Move Businesses | Mayhem Bangladesh
+        </h1>
+
         <motion.div
           variants={container}
           initial="hidden"
           animate="show"
           className="text-center max-w-5xl mx-auto"
         >
-          {/* ✅ Visible SEO H1 */}
-          <motion.h1
+          {/* Motion H1 for visual display */}
+          <motion.h2
             variants={item}
             className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05] mb-8"
           >
@@ -49,9 +54,8 @@ export default function Hero() {
             </span>
             <br />
             That Move Businesses
-          </motion.h1>
+          </motion.h2>
 
-          {/* supporting text should NOT be another big heading */}
           <motion.p
             variants={item}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12"
@@ -61,7 +65,6 @@ export default function Hero() {
             design precision.
           </motion.p>
 
-          {/* buttons */}
           <motion.div
             variants={item}
             className="flex flex-col sm:flex-row gap-5 justify-center"
