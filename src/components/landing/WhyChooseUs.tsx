@@ -31,8 +31,8 @@ const benefits = [
     title: "Scalable Solutions",
     description:
       "Architecture designed to grow with your business, from startup to enterprise scale.",
-    stat: "10M+",
-    statLabel: "Users served by our apps",
+    stat: "1M+",
+    statLabel: "Users can be served by our apps",
   },
 ];
 
