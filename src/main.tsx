@@ -11,6 +11,7 @@ import Product from "./pages/Products";
 import Testimonials from "./pages/Testimonials";
 
 import "./index.css";
+import Careers from "./pages/Careers";
 
 createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -22,7 +23,8 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<Product />} />
-        <Route path="/products" element={<Testimonials />} />
+        <Route path="/careers" element={<Careers />} />
+        <Route path="/testimonials" element={<Testimonials />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
