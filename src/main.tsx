@@ -16,16 +16,17 @@ import Careers from "./pages/Careers";
 createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:slug" element={<Product />} />
-        <Route path="/careers" element={<Careers />} />
-        <Route path="/testimonials" element={<Testimonials />} />
-      </Routes>
+     <Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/about" element={<About />} />
+  <Route path="/services" element={<Services />} />
+  <Route path="/contact" element={<Contact />} />
+  <Route path="/blog" element={<Blog />} />
+  <Route path="/blog/:slug" element={<Product />} />
+  <Route path="/products" element={<Product />} />  {/* Add this */}
+  <Route path="/careers" element={<Careers />} />
+  <Route path="/testimonials" element={<Testimonials />} />
+</Routes>
     </BrowserRouter>
   </React.StrictMode>
 );
