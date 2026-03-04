@@ -51,7 +51,7 @@ export default function Hero() {
           variants={item}
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 text-center"
         >
-          Mayhem is a full-service IT company delivering high-impact web,
+          Mayhem Softwares Bangladesh is a full-service IT company delivering high-impact web,
           cloud, and AI solutions with production-grade reliability and
           design precision.
         </motion.p>
