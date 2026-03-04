@@ -4,41 +4,6 @@ import { motion } from "framer-motion";
 import { MapPin, Clock, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const openings = [
-  {
-    title: "Backend Engineer",
-    type: "Full-time",
-    location: "Dhaka",
-    description: "Design and develop scalable APIs and microservices powering our client solutions.",
-  },
-  {
-    title: "UI/UX Designer",
-    type: "Full-time",
-    location: "Remote",
-    description: "Craft intuitive, delightful user experiences for web and mobile products.",
-  },
-  {
-    title: "Mobile Developer (Flutter)",
-    type: "Full-time",
-    location: "Dhaka / Remote",
-    description: "Build cross-platform mobile apps that users love.",
-  },
-  {
-    title: "DevOps Engineer",
-    type: "Contract",
-    location: "Remote",
-    description: "Manage cloud infrastructure, CI/CD pipelines, and deployment automation.",
-  },
-];
-
-const perks = [
-  "Flexible working hours",
-  "Remote-friendly culture",
-  "Learning & development budget",
-  "Health benefits",
-  "Team retreats",
-  "Competitive salary",
-];
 
 const Careers = () => {
   return (
@@ -56,7 +21,7 @@ const Careers = () => {
             Join Our <span className="text-gradient">Team</span>
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            We're looking for passionate people to help us build exceptional software. Come grow with us.
+            We're always on the lookout for talented humans… or maybe robots. 😉
           </p>
         </motion.div>
 
@@ -78,34 +43,18 @@ const Careers = () => {
           </div>
         </motion.div>
 
-        {/* Openings */}
+        {/* Snarky placeholder for openings */}
         <div className="max-w-4xl mx-auto space-y-4">
           <h2 className="text-2xl font-semibold mb-6">Open Positions</h2>
-          {openings.map((job, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.08 }}
-              className="glass rounded-2xl p-6 flex flex-col md:flex-row md:items-center justify-between gap-4"
-            >
-              <div>
-                <h3 className="font-semibold text-lg">{job.title}</h3>
-                <p className="text-sm text-muted-foreground mt-1">{job.description}</p>
-                <div className="flex items-center gap-4 mt-3 text-xs text-muted-foreground">
-                  <span className="flex items-center gap-1">
-                    <Clock className="h-3 w-3" /> {job.type}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <MapPin className="h-3 w-3" /> {job.location}
-                  </span>
-                </div>
-              </div>
-              <Button variant="outline" className="rounded-full shrink-0 gap-2">
-                Apply <ArrowRight className="h-4 w-4" />
-              </Button>
-            </motion.div>
-          ))}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="glass rounded-2xl p-6 text-center text-muted-foreground"
+          >
+            <p className="text-lg">
+              We might hire some humans soon… or not. Stay tuned, or just send us a carrier pigeon. 🕊️
+            </p>
+          </motion.div>
         </div>
       </section>
 
